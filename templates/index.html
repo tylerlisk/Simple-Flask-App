@@ -8,6 +8,8 @@
 <body>
     {% if name %}
         <h1> Whats up, {{name}}! Welcome to my first Flask App!</h1>
+        <h2>Would you like to give some feedback?</h2>
+        <a href="/{{name}}/feedback_form">Feedback Form</a>
     {% else %}
         <h1>Hey there! Could I get your name?</h1>
         <form action="/" method="POST">
