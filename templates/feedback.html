@@ -6,6 +6,9 @@
     <title>User Feedback</title>
 </head>
 <body>
+    {% for messages in get_flashed_messages() %}
+        <p>{{messages}}</p>
+    {% endfor %}
     {% if user_feedback %}
         <h1>User Feedback</h1>
         {% for user, feedback in user_feedback.items() %}
